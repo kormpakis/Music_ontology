@@ -1,0 +1,1244 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#artist_liked_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#artist_liked_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#likes_artist"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#composes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#composes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_composed_by"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#contains_tracks -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#contains_tracks">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_contained_in_record"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#genre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#genre">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_of_genre"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#genre_liked_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#genre_liked_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#likes_genre"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#has_members -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#has_members">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#member_of"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Solo_artist"/>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_also_in_band -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_also_in_band">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_also_solo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Solo_artist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_also_solo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_also_solo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Solo_artist"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_composed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_composed_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_contained_in_record -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_contained_in_record">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_of_genre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_of_genre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#likes_artist -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#likes_artist">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#likes_genre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#likes_genre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#likes_musical_manifestation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#likes_musical_manifestation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#member_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#member_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Solo_artist"/>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#user_similar_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#user_similar_to">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Birth_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Birth_date">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Email">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Full_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Full_name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#artist_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#artist_name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#release_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#release_date">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Solo_artist"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Solo_artist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Blues -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Blues">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Jazz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Jazz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Reggae -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Reggae">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Solo_artist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Solo_artist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Cliff_Burton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Cliff_Burton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+        <member_of rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Dave_Mustaine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Dave_Mustaine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+        <member_of rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Em_All -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Em_All"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#James_Hetfield -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#James_Hetfield">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+        <likes_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <member_of rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Jason_Newsted -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Jason_Newsted">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+        <member_of rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Kirk_Hammett -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Kirk_Hammett">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+        <member_of rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Korbakis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Korbakis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+        <likes_artist rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <likes_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#heavy_metal"/>
+        <likes_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#thrash_metal"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_...And_Justice_For_All"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Black_Album"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Death_Magnetic"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Hardwired..._To_Self-Destruct"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Load"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Master_Of_Puppets"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Reload"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Ride_The_Lightning"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_St._Anger"/>
+        <user_similar_to rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#TestingUser"/>
+        <Birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-05-30T09:00:00</Birth_date>
+        <Email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">korbakis@ceid.upatras.gr</Email>
+        <Full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giorgos Korbakis</Full_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Lars_Ulrich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Lars_Ulrich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+        <member_of rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Music_artist"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Solo_artist"/>
+            </owl:Class>
+        </rdf:type>
+        <artist_liked_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Korbakis"/>
+        <artist_liked_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#TestingUser"/>
+        <composes rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Em_All"/>
+        <composes rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_...And_Justice_For_All"/>
+        <composes rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Black_Album"/>
+        <composes rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Death_Magnetic"/>
+        <composes rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Hardwired..._To_Self-Destruct"/>
+        <composes rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Load"/>
+        <composes rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Master_Of_Puppets"/>
+        <composes rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Reload"/>
+        <composes rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Ride_The_Lightning"/>
+        <composes rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_St._Anger"/>
+        <genre_liked_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#James_Hetfield"/>
+        <has_members rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Cliff_Burton"/>
+        <has_members rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Dave_Mustaine"/>
+        <has_members rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#James_Hetfield"/>
+        <has_members rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Jason_Newsted"/>
+        <has_members rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Kirk_Hammett"/>
+        <has_members rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Lars_Ulrich"/>
+        <has_members rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Robert_Trujillo"/>
+        <has_members rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Ron_McGovney"/>
+        <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica</artist_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_...And_Justice_For_All -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_...And_Justice_For_All">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdf:type>
+        <is_composed_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#progressive_metal"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#thrash_metal"/>
+        <release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1988-08-25T00:00:00</release_date>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica - ...And Justice For All</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Black_Album -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Black_Album">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdf:type>
+        <is_composed_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#heavy_metal"/>
+        <release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1991-08-12T00:00:00</release_date>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica - Black Album</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Death_Magnetic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Death_Magnetic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdf:type>
+        <is_composed_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#heavy_metal"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#thrash_metal"/>
+        <release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-09-12T00:00:00</release_date>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica - Death Mangetic</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Hardwired..._To_Self-Destruct -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Hardwired..._To_Self-Destruct">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdf:type>
+        <is_composed_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#heavy_metal"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#thrash_metal"/>
+        <release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-18T00:00:00</release_date>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica - Hardwired... To Self-Destruct</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Load -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Load">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdf:type>
+        <is_composed_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#alternative_metal"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#hard_rock"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#heavy_metal"/>
+        <release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1996-06-04T00:00:00</release_date>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica - Load</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Master_Of_Puppets -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Master_Of_Puppets">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdf:type>
+        <is_composed_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#thrash_metal"/>
+        <release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-03-03T00:00:00</release_date>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica - Master Of Puppets</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Reload -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Reload">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdf:type>
+        <is_composed_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#alternative_metal"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#hard_rock"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#heavy_metal"/>
+        <release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-11-18T00:00:00</release_date>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica - Reload</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Ride_The_Lightning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Ride_The_Lightning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdf:type>
+        <is_composed_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#thrash_metal"/>
+        <release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1984-07-27T00:00:00</release_date>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica - Ride The Lightning</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_St._Anger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_St._Anger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdf:type>
+        <is_composed_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#alternative_metal"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#heavy_metal"/>
+        <release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-06-05T00:00:00</release_date>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica - St. Anger</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Robert_Trujillo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Robert_Trujillo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+        <member_of rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Ron_McGovney -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Ron_McGovney">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Band_member"/>
+        <member_of rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#TestingUser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#TestingUser">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#User"/>
+        <likes_artist rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <likes_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#heavy_metal"/>
+        <likes_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#thrash_metal"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Em_All"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_...And_Justice_For_All"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Black_Album"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Death_Magnetic"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Hardwired..._To_Self-Destruct"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Load"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Master_Of_Puppets"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Reload"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Ride_The_Lightning"/>
+        <likes_musical_manifestation rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_St._Anger"/>
+        <user_similar_to rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Korbakis"/>
+        <user_similar_to rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#TestingUser"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#alternative_metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#alternative_metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Load"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Reload"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_St._Anger"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#black_metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#black_metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#blues_rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#blues_rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#britpop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#britpop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#death_metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#death_metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#doom_metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#doom_metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#garage_rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#garage_rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#glam_metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#glam_metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#grunge_rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#grunge_rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#hard_rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#hard_rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Load"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Reload"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#heavy_metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#heavy_metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Black_Album"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Death_Magnetic"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Hardwired..._To_Self-Destruct"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Load"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Reload"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_St._Anger"/>
+        <genre_liked_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Korbakis"/>
+        <genre_liked_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#TestingUser"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#indie_rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#indie_rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#industrial_metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#industrial_metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#metalcore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#metalcore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#nu_metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#nu_metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#post_metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#post_metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#power_metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#power_metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#progressive_metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#progressive_metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_...And_Justice_For_All"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#progressive_rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#progressive_rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#psychedelic_rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#psychedelic_rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#punk_rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#punk_rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#thrash_metal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#thrash_metal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Em_All"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_...And_Justice_For_All"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Death_Magnetic"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Hardwired..._To_Self-Destruct"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Master_Of_Puppets"/>
+        <genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Ride_The_Lightning"/>
+        <genre_liked_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Korbakis"/>
+        <genre_liked_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#TestingUser"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Kill_&apos;Em_All -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica_-_Kill_&apos;Em_All">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Musical_manifestation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Record"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Track"/>
+            </owl:Class>
+        </rdf:type>
+        <is_composed_by rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metallica"/>
+        <is_of_genre rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#thrash_metal"/>
+        <release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-07-25T00:00:00</release_date>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallica - Kill &apos;Em All</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Blues"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Jazz"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Metal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Reggae"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Rock"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#X">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Z">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#A">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#N">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A user is similar to another if they like one same genre and one same artist</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A user is similar to another if they like one same genre and one same artist</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#genre_liked_by"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#X"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#genre_liked_by"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#X"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Z"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#artist_liked_by"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#A"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Y"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#artist_liked_by"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#A"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Z"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#user_similar_to"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Y"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A user likes a genre and an album is of this genre and this album is composed by an artist, so this user likes this artist</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A user likes a genre and an album is of this genre and this album is composed by an artist, so this user likes this artist</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#likes_genre"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#X"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_of_genre"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Z"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_composed_by"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Z"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#N"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#likes_artist"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#X"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#N"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A user likes an musical manifestations of the genre he likes</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A user likes an musical manifestations of the genre he likes</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#likes_genre"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#X"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#is_of_genre"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Z"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#likes_musical_manifestation"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#X"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/user/ontologies/2018/8/untitled-ontology-5#Z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
